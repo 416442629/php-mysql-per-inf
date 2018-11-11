@@ -1,2 +1,2 @@
-# web-add.php
-MYSQL数据库操作，人员信息前端：add.php界面。
+# web/php/mysql
+MYSQL数据库操作/人员信息/前端
