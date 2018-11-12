@@ -125,3 +125,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   </main>
 </body>
 </html>
+<!-- 注意 HTML name 的值   name 未设置  将引起 POST 不能传来数据  因此 提交页面  数据将不会更新。 -->
