@@ -30,6 +30,8 @@ if (!$user) {
 }
 
 function edit () {
+  global $id;
+  global $conn;
   global $user;
 
   // 验证非空
@@ -64,6 +66,17 @@ function edit () {
     }
     $user['avatar'] = $target;
   }
+  //保存  数据库：  注意$ID $CONN  设置全局变量  
+   $query2 = mysqli_query($conn, "UPDATE user SET name = '{$user['name']}',gender = {$user['gender']},birthday = '{$user['birthday']}', avatar = '{$user['avatar']}' where id = {$id} ;");
+if(!$query2){
+   $GLOBALS['error_message']='数据库保存失败2';
+   return;
+ }
+ $affected_rows = mysqli_affected_rows($conn);
+if($affected_rows !==1){
+  $GLOBALS['error_message'] = '添加数据失败3';
+  return;
+}
 
   // $user => 修改过后的信息
   // TODO: 将数据更新回数据库
