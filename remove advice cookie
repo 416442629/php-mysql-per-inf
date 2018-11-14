@@ -2,6 +2,7 @@
 	if(isset($_GET['action']) && $_GET['action'] === 'close_ad'){
 		setcookie('hide_ad','1');
 		//$_COOKIE['hide_ad'] === '1';刷新一下才能去除广告
+		header('Location: index.php');
 	}
  ?>
  <!DOCTYPE html>
