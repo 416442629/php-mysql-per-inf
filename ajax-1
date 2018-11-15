@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ajax</title>
+</head>
+<body>
+  <script>
+    var xhr = new XMLHttpRequest()
+    xhr.open('POST','./add.php')
+    // xhr.setRequestHeader('Foo','Bar')
+    xhr.setRequestHeader('Content-Type','application/x-www-form-urlencode')
+    xhr.send('key1=value&key2=value2')
+  </script>
+  
+</body>
+</html>
