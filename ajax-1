@@ -27,3 +27,4 @@ xhr.onreadystatechange = function () {
 if (this.readyState === 4) {
 // 通过 xhr 的 responseText 获取到响应的响应体
 console.log(this)
+//响应体下载完成，可以直接使用 responseText 。
